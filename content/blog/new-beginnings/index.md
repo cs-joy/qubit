@@ -106,3 +106,13 @@ to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
 for their projects again and again.
+
+###### union
+
+A union is a user-defined type in which all members share the same memory location. This definition means that at any given time, a union can contain no more than one object from its list of members. It also means that no matter how many members a union has, it always uses only enough memory to store the largest member.
+
+A union can be useful for conserving memory when you have lots of objects and limited memory. However, a union requires extra care to use correctly. You're responsible for ensuring that you always access the same member you assigned. If any member types have a non-trivial constructor, then you must write additional code to explicitly construct and destroy that member. Before you use a union, consider whether the problem you're trying to solve could be better expressed by using a base class and derived class types.
+
+`code cpp
+hello
+`
