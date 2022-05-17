@@ -113,6 +113,23 @@ A union is a user-defined type in which all members share the same memory locati
 
 A union can be useful for conserving memory when you have lots of objects and limited memory. However, a union requires extra care to use correctly. You're responsible for ensuring that you always access the same member you assigned. If any member types have a non-trivial constructor, then you must write additional code to explicitly construct and destroy that member. Before you use a union, consider whether the problem you're trying to solve could be better expressed by using a base class and derived class types.
 
-`code cpp
-hello
-`
+```cpp
+#include <iostream>
+using namespace std;
+
+union suit {
+  int i;
+  float f;
+  double d;
+}
+
+int main() {
+  cout << "Hello World" << endl;
+
+  suit s;
+  s.i sb = 5;
+  cout << "sb= " << sb << endl;
+
+  return 0;
+}
+```
