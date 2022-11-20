@@ -123,12 +123,21 @@ union suit {
   double d;
 }
 
+namespace js {
+    string display(string str){
+        cout << str << endl; 
+    }
+}
+
 int main() {
-  cout << "Hello World" << endl;
+  string myString = "Hello World";
+  //cout << myString << endl;
 
   suit s;
   s.i sb = 5;
   cout << "sb= " << sb << endl;
+  
+  js::display(myString);
 
   return 0;
 }
